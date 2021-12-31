@@ -5,7 +5,6 @@ const clients = new Set();
 
 wss.on('connection', ws => {
   clients.add(ws);
-  console.log('Added client: ' + ws.name)
 
   ws.on('message', message => {
     console.log(`Received message => ${message}`);
